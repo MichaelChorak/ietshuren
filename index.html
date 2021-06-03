@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+</head>
+<header id="header">
+    <nav>
+        <ul>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+              </li>
+        </ul>
+    </nav>
+
+    <button id="loginBtn">Inloggen</button>
+</header>
+<main>
+    <body>
+        <div class="container">
+            <h1>Iets huren?</h1>
+          <div id="searchContainer">
+              <form action="post">
+
+                <input type="search" name="product" id="product" placeholder="Wat wilt u huren?">
+
+                <input type="search" name="where" id="where" placeholder="Waar?">
+
+                <input type="date" name="when" id="when">
+                  
+                <input type="button" value="Zoeken" id="searchBtn">
+              </form>
+          </div>  
+        </div>
+    </body>
+</main>
+<footer>
+
+</footer>
+</html>
+
+
+
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: 'Hello Vue!'
+        }
+    })
+
+var app4 = new Vue({
+  el: '#header',
+  data: {
+    todos: [
+      { text: 'Home' },
+      { text: 'Over ons' },
+      { text: 'Contact' }
+    ]
+  }
+})
+
+console.log(header);
+</script>
