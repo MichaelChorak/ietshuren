@@ -83,7 +83,20 @@ h1,h2,h3,h4,h5,h6{
     align-items: center;
 }
 
+.showForm {
+    display: grid !important;
+    animation: scaleUp 0.6s alternate forwards;
+}
 
+@keyframes scaleUp {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
 #searchBtn {
     background-color: #85b385;
     color: #fff;
@@ -98,4 +111,93 @@ h1,h2,h3,h4,h5,h6{
 #searchBtn:hover {
     background-color: rgb(58, 134, 58);
     transition: 0.3s;
+}
+
+/* CSS styling for the login modal/popup */
+#loginFormContainer {
+    width: 30vw;
+    height: 35vh;
+    border: 1px solid #efefef;
+    left: 34%;
+    top: 40px;
+    position: relative;
+    transform: translate(-50%, 0%);
+    /* display: grid; */
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: 1px 1px 18px #f1f1f1;
+}
+
+#loginFormContainer::after {
+    content: "Of";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    lefT: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    border: 1px solid #00000014;
+    margin-top: -15px;
+    margin-left: -15px;
+    background-color: #fff;
+    z-index: 1;
+    color: lightgray;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 25px;
+    width: 20px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.close > i {
+    color: #fff;
+}
+
+.loginBtn {
+    background-color: #85b385;
+    color: #fff;
+    border-radius: 50px;
+    padding: 5px 25px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+.loginBtn:hover {
+    background-color: rgb(58, 134, 58);
+    transition: 0.3s;
+}
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    border-right: 1px solid #00000014;
+    z-index: -1;
+}
+
+#loginForm > input {
+    width: 66%;
+    font-size: 1em;
+    margin-top: 5%;
+    border-top: none;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid lightgray;
+}
+
+#loginForm > input::placeholder {
+    color: lightgrey
 }
