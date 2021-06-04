@@ -1,0 +1,26 @@
+{
+  "name": "ietshuren",
+  "version": "1.0.0",
+  "description": "Iets huren project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelChorak/ietshuren.git"
+  },
+  "author": "Michael Chorak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichaelChorak/ietshuren/issues"
+  },
+  "homepage": "https://github.com/MichaelChorak/ietshuren#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.9",
+    "mongoose": "^5.12.12",
+    "nodemon": "^2.0.7"
+  }
+}
